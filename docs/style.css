@@ -4,27 +4,41 @@
     --rgba-pink: rgba(198, 3, 133, 0.5);
     --rgba-blue: rgba(0, 255, 255, 0.5);
     --rgba-pink-glow: rgba(255, 0, 170, 0.57);
-
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    /* text-decoration: 2px underline var(--accent-pink); */
+}
+
+.flex-container {
+    width: 100%;
+    margin: 0;
+    padding: 0 3px;
+}
+
 .projectCard {
-    min-width: 300px;
+    min-width: 280px;
     max-width: 500px;
     margin: 40px auto;
+    text-align: center;
     border: 5px solid var(--accent-pink);
     border-radius: 20px;
-    box-shadow: 10px 10px 5px var(--rgba-pink);
-    text-align: center;
+    box-shadow: 3px 5px 5px var(--rgba-pink);
+    transition: transform 200ms;
 }
 
 .projectCard:hover {
-    box-shadow: 10px 5px 10px var(--rgba-pink-glow);
+    box-shadow: 5px 5px 10px var(--rgba-pink-glow);
     cursor: pointer;
-    transition-duration: 200ms;
+    transform: translate3d(-2px, -2px, 0);
 }
 
 .projectCard img {
@@ -39,7 +53,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 0 0 0 10px;
+    padding: 0 10px;
 }
 
 .projectCard ul p, .projectCard ul li {
@@ -53,4 +67,43 @@ body {
 
 .projectCard ul li {
     list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .projectCard {
+        box-shadow: 10px 10px 5px var(--rgba-pink);
+        transition: transform 1s;
+    }
+
+    .projectCard:hover {
+        box-shadow: 5px 5px 10px var(--rgba-pink-glow);
+        cursor: pointer;
+        transform: translate3d(-10px, -10px, 0);
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .projectCard {
+        /* margin: 40px auto; */
+
+
+        
+        /* border: 5px solid var(--accent-pink); */
+        /* border-radius: 20px; */
+        /* box-shadow: 10px 10px 5px var(--rgba-pink); */
+        /* text-align: center; */
+    }
+    
+    .projectCard:hover {
+        box-shadow: 10px 5px 10px var(--rgba-pink-glow);
+        cursor: pointer;
+        transition-duration: 200ms;
+    }
+    
 }
