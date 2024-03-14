@@ -1,0 +1,56 @@
+:root {
+    --accent-pink: #ff02ab;
+    --accent-blue: #00ffff;
+    --rgba-pink: rgba(198, 3, 133, 0.5);
+    --rgba-blue: rgba(0, 255, 255, 0.5);
+    --rgba-pink-glow: rgba(255, 0, 170, 0.57);
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.projectCard {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 40px auto;
+    border: 5px solid var(--accent-pink);
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px var(--rgba-pink);
+    text-align: center;
+}
+
+.projectCard:hover {
+    box-shadow: 10px 5px 10px var(--rgba-pink-glow);
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.projectCard img {
+    width: 75%;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.projectCard ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 0 0 10px;
+}
+
+.projectCard ul p, .projectCard ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.projectCard ul p {
+    font-weight: bold;
+}
+
+.projectCard ul li {
+    list-style: none;
+}
