@@ -41,6 +41,10 @@ h1 {
     transform: translate3d(-2px, -2px, 0);
 }
 
+.projectCard h2 {
+    font-size: 1rem;
+}
+
 .projectCard img {
     width: 75%;
     height: 200px;
@@ -71,6 +75,10 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+    .projectCard h2 {
+        font-size: 1.5rem;
+    }
+    
     .projectCard {
         width: 500px;
         box-shadow: 10px 10px 5px var(--rgba-pink);
