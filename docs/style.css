@@ -24,6 +24,17 @@ h1 {
     padding: 0 3px;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    min-width: 280px;
+    max-width: 500px;
+    height: 380px;
+    margin: 40px auto;
+
+}
+
 .projectCard {
     min-width: 280px;
     max-width: 500px;
