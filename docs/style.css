@@ -19,51 +19,42 @@ h1 {
 }
 
 .flex-container {
-    width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 3px;
 }
 
-a {
+a.projectCard {
     display: block;
     text-decoration: none;
     color: black;
+    margin: 40px auto;
     min-width: 280px;
     max-width: 500px;
     height: 380px;
-    margin: 40px auto;
-
-}
-
-.projectCard {
-    min-width: 280px;
-    max-width: 500px;
-    height: 380px;
-    margin: 40px auto;
     text-align: center;
     border: 5px solid var(--accent-pink);
     border-radius: 20px;
     box-shadow: 3px 5px 5px var(--rgba-pink);
-    transition: transform 200ms;
+    transition: transform 500ms;
 }
 
-.projectCard:hover {
+a.projectCard:hover {
     box-shadow: 5px 5px 10px var(--rgba-pink-glow);
     transform: translate3d(-2px, -2px, 0);
 }
 
-.projectCard h2 {
-    font-size: 1rem;
+a.projectCard h2 {
+    font-size: 1.25rem;
 }
 
-.projectCard img {
+a.projectCard img {
     width: 75%;
     height: 200px;
     border-radius: 20px;
     border: 1px solid black;
 }
 
-.projectCard ul {
+a.projectCard ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,36 +63,58 @@ a {
     padding: 0 10px;
 }
 
-.projectCard ul p, .projectCard ul li {
+a.projectCard ul p, a.projectCard ul li {
     margin: 0;
     padding: 0;
 }
 
-.projectCard ul p {
+a.projectCard ul p {
     font-weight: bold;
 }
 
-.projectCard ul li {
+a.projectCard ul li {
     list-style: none;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    background-color: #333333e8;
+    border-top: 3px solid var(--accent-pink);
+    color: white;
+}
+
+.icon-links {
+    color: var(--accent-pink);
+    font-size: 1rem;
+}
+
+.icon:hover {
+    color: var(--accent-blue);
+    font-size: 1.25rem;
+    transition-duration: 500ms;
+}
+
+
 @media screen and (min-width: 768px) {
-    .projectCard h2 {
+    a.projectCard h2 {
         font-size: 1.5rem;
     }
     
-    .projectCard {
+    a.projectCard {
         width: 500px;
         box-shadow: 10px 10px 5px var(--rgba-pink);
         transition: transform 1s;
     }
 
-    .projectCard:hover {
+    a.projectCard:hover {
         box-shadow: 5px 5px 10px var(--rgba-pink-glow);
         transform: translate3d(-10px, -10px, 0);
     }
 
-    .projectCard ul {
+    a.projectCard ul {
         position: relative;
         top: 20px;
     }
@@ -122,7 +135,31 @@ a {
         justify-content: space-evenly;
     }
 
-    .projectCard {
+    a.projectCard {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+/* TODO:
+1. need to fix cards over lapping at xl size screens
+2. anchor tag not aligning with cards on larger screens */
+@media screen and (min-width: 1680px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .flex-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    a.projectCard {
         margin-left: 20px;
         margin-right: 20px;
     }
